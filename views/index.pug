@@ -1,0 +1,9 @@
+extends layout/index
+
+block content
+  ul
+    each entry in entries
+      li
+        a(href='/article/'+entry.id) #{entry.title}
+        br
+        | Published: #{entry.published}
