@@ -5,6 +5,7 @@ block content
     each entry in entries
       li.post-item
         a(href='/article/'+entry.id) #{entry.title}
+        a.btn.btn-primary.btn-xs.edit(href='/edit/' + entry.id) Edit
         button.btn.btn-danger.btn-xs.remove(data-id=entry.id) Remove
         br
         | Published: #{entry.published}

@@ -2,6 +2,6 @@
   margin-bottom:10px;
 }
 
-.post-item .remove {
+.post-item .remove, .post-item .edit {
   margin-left: 10px;
 }

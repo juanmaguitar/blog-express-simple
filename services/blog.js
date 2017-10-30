@@ -5,7 +5,7 @@ function getBlogEntries() {
 }
 
 function getBlogEntry(id) {
-  return entries.find( entry => entry.id === id)
+  return entries.find( entry => entry.id === +id)
 }
 
 function addBlogEntry(post) {
@@ -16,4 +16,14 @@ function removeBlogEntry(id) {
   entries = entries.filter( post => post.id !== +id)
 }
 
-module.exports = { getBlogEntries, getBlogEntry, addBlogEntry, removeBlogEntry }
+function editBlogEntry(id, title, body) {
+  entries = entries.map( post => {
+    if (post.id == +id) {
+      post.title = title
+      post.body = body
+    }
+    return post
+  })
+}
+
+module.exports = { getBlogEntries, getBlogEntry, addBlogEntry, removeBlogEntry, editBlogEntry }

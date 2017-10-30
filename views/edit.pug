@@ -1,0 +1,15 @@
+extends layout/index
+
+block content
+  .row
+    .col-md-6.col-md-offset-3
+      form.edit-post(action='', role='form', data-id=entry.id)
+        legend Edit Post:
+          strong= entry.title
+        .form-group
+          label(for='title') Title
+          input.form-control(type='text', name='title', id='title', placeholder='Title...', value=entry.title)
+          label(for='body') Content
+          textarea.form-control(type='text', name='body', id='body', placeholder='Body...')
+            | #{entry.body}
+        button.btn.btn-primary(type='submit') Submit
