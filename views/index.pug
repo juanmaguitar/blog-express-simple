@@ -3,7 +3,8 @@ extends layout/index
 block content
   ul
     each entry in entries
-      li
+      li.post-item
         a(href='/article/'+entry.id) #{entry.title}
+        button.btn.btn-danger.btn-xs.remove(data-id=entry.id) Remove
         br
         | Published: #{entry.published}

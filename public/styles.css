@@ -1,3 +1,7 @@
-body {
+.post-item {
+  margin-bottom:10px;
+}
 
+.post-item .remove {
+  margin-left: 10px;
 }
