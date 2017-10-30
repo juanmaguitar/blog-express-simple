@@ -1,4 +1,4 @@
-const entries = require('./data/entries.json')
+const entries = require('../data/entries.json')
 
 function getBlogEntries() {
   return entries;
